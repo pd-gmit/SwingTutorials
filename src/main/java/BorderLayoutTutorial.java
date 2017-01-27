@@ -15,8 +15,8 @@ public class BorderLayoutTutorial {
 	public static void main(String[] args) {
 			
 		//here we use the static method of the SwingUtilities class, invokeLater(), to 
-		//create a "runnable environment" for "runnable" BorderLayout object. Once that environment is in place
-		//we then create an anonymous BorderLayoutTutorial object !
+		//create a "runnable environment" for the "runnable" BorderLayout object. Once that environment is in place
+		//we then create an anonymous BorderLayoutTutorial object!
 		SwingUtilities.invokeLater(new Runnable() {
 			@Override
 			public void run() {
