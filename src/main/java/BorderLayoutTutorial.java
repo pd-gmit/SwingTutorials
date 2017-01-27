@@ -27,7 +27,7 @@ public class BorderLayoutTutorial {
 		});
 	}
 	
-	
+	//This is the constructor for our BorderLayoutTutorial.
 	public BorderLayoutTutorial() {
 		frame.setLayout(new BorderLayout());   //Tell the frame to use Border layout
 		frame.add(btn1, BorderLayout.NORTH);
