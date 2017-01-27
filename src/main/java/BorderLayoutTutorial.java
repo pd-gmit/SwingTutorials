@@ -30,13 +30,13 @@ public class BorderLayoutTutorial {
 	//This is the constructor for our BorderLayoutTutorial.
 	public BorderLayoutTutorial() {
 		frame.setLayout(new BorderLayout());   //Tell the frame to use Border layout
-		frame.add(btn1, BorderLayout.NORTH);
-		frame.add(btn2, BorderLayout.SOUTH);
+		frame.add(btn1, BorderLayout.NORTH);   //place btn1 at the northern part of the GUI
+		frame.add(btn2, BorderLayout.SOUTH);   //etc ...
 		frame.add(btn3, BorderLayout.CENTER);
 		frame.add(btn4, BorderLayout.WEST);
 		frame.add(btn5, BorderLayout.EAST);
 		
-		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);  //EXIT_ON_CLOSE works as well 
 		frame.pack();   //make it all nice and neat!
 		frame.setVisible(true); //last thing we do is show the GUI (we're spared watching components appearing!)
 	}
