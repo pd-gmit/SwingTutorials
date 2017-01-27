@@ -3,7 +3,7 @@ import java.awt.*;
 
 public class BorderLayoutTutorial {
 	
-	// Lets create the objects that we need 
+	// Lets create the objects that we'll need 
 	JFrame frame = new JFrame("BorderLayout demo");
 	JButton btn1 = new JButton("NORTH");
 	JButton btn2 = new JButton("SOUTH");
@@ -13,9 +13,10 @@ public class BorderLayoutTutorial {
 	
 	//The main method creates a seperate thread to run an object/instance of the BorderLayoutTutorial class
 	public static void main(String[] args) {
+			
 		//here we use the static method of the SwingUtilities class, invokeLater(), to 
-		//create a "runnable environment" for our BorderLayout class and then to run 
-		//that instance in that thread.
+		//create a "runnable environment" for "runnable" BorderLayout object. Once that environment is in place
+		//we then create an anonymous BorderLayoutTutorial object !
 		SwingUtilities.invokeLater(new Runnable() {
 			@Override
 			public void run() {
@@ -28,7 +29,7 @@ public class BorderLayoutTutorial {
 	
 	
 	public BorderLayoutTutorial() {
-		frame.setLayout(new BorderLayout());
+		frame.setLayout(new BorderLayout());   //Tell the frame to use Border layout
 		frame.add(btn1, BorderLayout.NORTH);
 		frame.add(btn2, BorderLayout.SOUTH);
 		frame.add(btn3, BorderLayout.CENTER);
@@ -36,7 +37,7 @@ public class BorderLayoutTutorial {
 		frame.add(btn5, BorderLayout.EAST);
 		
 		frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
-		frame.pack();
-		frame.setVisible(true);
+		frame.pack();   //make it all nice and neat!
+		frame.setVisible(true); //last thing we do is show the GUI (we're spared watching components appearing!)
 	}
 }
